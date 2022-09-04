@@ -79,7 +79,6 @@ class Running(Training):
         m_in_km = self.M_IN_KM
         m_in_h = self.MIN_IN_HUR
         duration = self.duration
-
         return (c_1 * average_speed - c_2) * weight / m_in_km * duration * m_in_h
 
 
