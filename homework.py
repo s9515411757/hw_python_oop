@@ -109,7 +109,9 @@ class SportsWalking(Training):
 
 class Swimming(Training):
     """Тренировка: плавание."""
+
     LEN_STEP = 1.38
+
     def __init__(self, action: int,
                  duration: float,
                  weight: float,
@@ -135,7 +137,12 @@ class Swimming(Training):
 
     def get_mean_speed(self) -> float:
         """Получить среднюю скорость при плавании."""
-        return self.length_pool * self.count_pool / self.M_IN_KM / self.duration
+        length_pool = self.length_pool
+        count_pool = self.count_pool
+        m_in_km = self.M_IN_KM
+        duration = self.duration
+
+        return length_pool * count_pool / m_in_km / duration
 
 
 def read_package(workout_type: str, data: list) -> Training:
