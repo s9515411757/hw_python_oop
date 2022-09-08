@@ -144,7 +144,6 @@ def read_package(workout_type: str, data: list) -> Training:
         raise ValueError(error)
 
 
-
 def main(training: Training) -> None:
     """Главная функция."""
     info: InfoMessage = training.show_training_info()
