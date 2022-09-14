@@ -1,5 +1,5 @@
 from dataclasses import dataclass, asdict
-from typing import ClassVar, Dict
+from typing import ClassVar, Dict, Type
 
 
 @dataclass
@@ -126,7 +126,7 @@ class Swimming(Training):
                 / self.M_IN_KM / self.duration)
 
 
-TRAINING_CODE: Dict[str, Training] = {
+TRAINING_CODE: Dict[str, Type[Training]] = {
     'SWM': Swimming,
     'RUN': Running,
     'WLK': SportsWalking
